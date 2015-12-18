@@ -4,7 +4,7 @@ $(function(){
 
   $(".choice").fadeOut(0,function(){
    $(this).fadeIn();
-  }); 
+  });
 
   $(".which").show(1000);
 
@@ -47,7 +47,7 @@ $(function(){
   // Check for 3 images in row with = and 8 combos separated by ||. SYNTAX
 
   var row = function () {
-    return ((($('.11').children('img').length) &&  ($('.22').children('img').length) &&  ($('.33').children('img').length)) 
+    return ((($('.11').children('img').length) &&  ($('.22').children('img').length) &&  ($('.33').children('img').length))
     || (($('.13').children('img').length) &&  ($('.22').children('img').length) &&  ($('.31').children('img').length))
     || (($('.11').children('img').length) &&  ($('.12').children('img').length) &&  ($('.13').children('img').length))
     || (($('.21').children('img').length) &&  ($('.22').children('img').length) &&  ($('.23').children('img').length))
@@ -64,22 +64,22 @@ $(function(){
   // X. Too much in here, I know....
 
   var playerX = function () {
-    var count = 0;    
+    var count = 0;
 
     $('#prompt').html('X');
 
-    //Want to detect click in parent div but assign image to specific child          
+    //Want to detect click in parent div but assign image to specific child
     $('.grid').click(function () {
       // ID which cell was clicked
       var target = $( event.target );
       // show image in that cell (by attaching)
       $(target).prepend('<img id="xxxx" src="./imgs/X.png" />')
       // Add to click count
-      count += 1;    
-      $('#prompt').html('O');  
+      count += 1;
+      $('#prompt').html('O');
     });
   }
- /*   
+ /*
     Var Click2 = function () {
       $('.grid').click(function () {
     // If click on div w/ img
@@ -91,7 +91,7 @@ $(function(){
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
         count += 1;
-        $('#prompt').html('X');      
+        $('#prompt').html('X');
       });
     };
 
@@ -104,7 +104,7 @@ $(function(){
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
         count += 1;
-        $('#prompt').html('O');      
+        $('#prompt').html('O');
       });
     };
 
@@ -117,7 +117,7 @@ $(function(){
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
         count += 1;
-        $('#prompt').html('X');      
+        $('#prompt').html('X');
       });
     };
 
@@ -129,7 +129,7 @@ $(function(){
         if ((count === 5) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       // win, lose check
       if (row) {
@@ -147,7 +147,7 @@ $(function(){
         if ((count === 6) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -165,7 +165,7 @@ $(function(){
         if ((count === 7) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -182,7 +182,7 @@ $(function(){
         if ((count === 8) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -199,7 +199,7 @@ $(function(){
         if ((count === 9) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -213,21 +213,21 @@ $(function(){
   // O.
 
   var playerO = function () {
-    var count = 0;    
+    var count = 0;
 
     $('#prompt').html('O');
-    
-    //Want to detect click in parent div but assign image to specific child         
+
+    //Want to detect click in parent div but assign image to specific child
     $('.grid').click(function () {
       // ID which cell was clicked
       var target = $( event.target );
       // show image in that cell (by attaching)
       $(target).prepend('<img id="xxxx" src="./imgs/o_small.png" />')
       // Add to click count
-      count += 1;    
-      $('#prompt').html('X');  
+      count += 1;
+      $('#prompt').html('X');
     });
-    
+
     Var Click2 = function () {
       $('.grid').click(function () {
     // If click on div w/ img
@@ -239,7 +239,7 @@ $(function(){
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
         count += 1;
-        $('#prompt').html('O');      
+        $('#prompt').html('O');
       });
     };
 
@@ -252,7 +252,7 @@ $(function(){
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
         count += 1;
-        $('#prompt').html('X');      
+        $('#prompt').html('X');
       });
     };
 
@@ -265,7 +265,7 @@ $(function(){
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
         count += 1;
-        $('#prompt').html('O');      
+        $('#prompt').html('O');
       });
     };
 
@@ -277,7 +277,7 @@ $(function(){
         if ((count === 5) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       // win, lose check
       if (row) {
@@ -295,7 +295,7 @@ $(function(){
         if ((count === 6) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -313,7 +313,7 @@ $(function(){
         if ((count === 7) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -330,7 +330,7 @@ $(function(){
         if ((count === 8) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/X.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -347,7 +347,7 @@ $(function(){
         if ((count === 9) && ($(event.target).find('img')===0)) {
           $( event.target).prepend('<img id="xxxx" src="./imgs/o_small.png" />'))
         };
-        count += 1;  
+        count += 1;
       });
       if (row) {
         $('#prompt').html(winner + ‘wins!’);
@@ -368,7 +368,7 @@ $(function(){
   };
 
 
-  
+
 
 */
 
