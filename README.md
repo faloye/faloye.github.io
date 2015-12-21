@@ -3,7 +3,9 @@
 # So...it's Tic Tac Toe.
 
 Yup, Tic Tac Toe...With a hip-hop theme for a little flavor. 
+
 Specifically, a theme grabbed from a perennial debate in the culture: 
+
 Big vs. Pac.
 
 ## How it works
